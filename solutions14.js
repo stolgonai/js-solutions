@@ -33,15 +33,25 @@ function isPerfectSquare(num) {
     if (num < 0) {
         return false;
     }
-    let sqrt = Math.sqrt(num);
-    return sqrt === Math.floor(sqrt);
+    if (num <= 1) return true
+    // let sqrt = Math.sqrt(num);
+    // return sqrt === Math.floor(sqrt);
+    const mediana = Math.floor(num / 2)
+    // console.log(mediana)
+    for (let i = 1; i <= mediana; i++) {
+        if (num / i === i) {
+            return true
+        }
+
+    }
+    return false
 }
-// console.log(isPerfectSquare(25))    // -> true
-// console.log(isPerfectSquare(24))    // -> false
-// console.log(isPerfectSquare(0)) //  -> true
-// console.log(isPerfectSquare(1)) //  -> true
-// console.log(isPerfectSquare(-1))   // -> false
-// console.log(isPerfectSquare(144))   //  -> true
+console.log(isPerfectSquare(25))    // -> true
+console.log(isPerfectSquare(24))    // -> false
+console.log(isPerfectSquare(0)) //  -> true
+console.log(isPerfectSquare(1)) //  -> true
+console.log(isPerfectSquare(-1))   // -> false
+console.log(isPerfectSquare(144))   //  -> true
 
 console.log(`--------------convertTemperature------------`)
 /*Write a function named convertTemperature() which takes a number and a 
@@ -106,8 +116,8 @@ const capsOdds = arr => {
     })
 }
 
-console.log(capsOdds(["Hello", "World"]))   //  -> ["Hello", "WORLD"]
-console.log(capsOdds(["Jan", "Feb", "Mar", "Apr"]))    // -> ["Jan", "FEB", "Mar", "APR"]
-console.log(capsOdds(["Apple", "Banana", "123", "456", "Peach", "Kiwi"]))   //  -> ["Apple", "BANANA", "123", "456", "Peach", "KIWI"]
-console.log(capsOdds([]))  //  -> [ ]
-console.log(capsOdds(["John !@#$%", "^&*() Doe"])) // -> ["John !@#$%", "^&*() DOE"]
+// console.log(capsOdds(["Hello", "World"]))   //  -> ["Hello", "WORLD"]
+// console.log(capsOdds(["Jan", "Feb", "Mar", "Apr"]))    // -> ["Jan", "FEB", "Mar", "APR"]
+// console.log(capsOdds(["Apple", "Banana", "123", "456", "Peach", "Kiwi"]))   //  -> ["Apple", "BANANA", "123", "456", "Peach", "KIWI"]
+// console.log(capsOdds([]))  //  -> [ ]
+// console.log(capsOdds(["John !@#$%", "^&*() Doe"])) // -> ["John !@#$%", "^&*() DOE"]
