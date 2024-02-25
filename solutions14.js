@@ -36,13 +36,13 @@ function isPerfectSquare(num) {
     if (num <= 1) return true
     // let sqrt = Math.sqrt(num);
     // return sqrt === Math.floor(sqrt);
+
+    // SECOND REGULAR WAY APROACH
     const mediana = Math.floor(num / 2)
-    // console.log(mediana)
     for (let i = 1; i <= mediana; i++) {
         if (num / i === i) {
             return true
         }
-
     }
     return false
 }
